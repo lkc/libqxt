@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+EXCLUDED="-nomake docs "
+EXCLUDED+="-nomake berkeley "
+EXCLUDED+="-nomake designer "
+EXCLUDED+="-nomake widgets "
+EXCLUDED+="-nomake network "
+EXCLUDED+="-nomake sql "
+EXCLUDED+="-nomake web "
+EXCLUDED+="-nomake zeroconf"
+
+echo $EXCLUDED
+
+if [ "$#" -eq 1 ]; then
+    ./configure -qmake-bin $1 $EXCLUDED
+else
+    ./configure $EXCLUDED
+fi
+

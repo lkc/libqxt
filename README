@@ -1,6 +1,9 @@
 1) configure
 
-	make sure qmake is in your PATH and run ./configure  or configure.bat on windows.
+	Linux/Mac:
+	 	./configure -qmake-bin <QMAKE_PATH>
+	Windows:
+		configure.bat -qmake-bin <QMAKE_PATH>
 
     	see configure --help for more information
 
